@@ -1,8 +1,8 @@
 {
-  "name": "solid-test",
+  "name": "solid-pg",
   "version": "1.0.0",
-  "description": "Solid single-page test application",
-  "main": "app.js",
+  "description": "Solid Playground - Solid Single-Page Playground Application",
+  "main": "app/index.js",
   "scripts": {
     "build": "webpack --config ./app/webpack.config.js --mode production",
     "dev": "webpack --config ./app/webpack.config.js --mode development",

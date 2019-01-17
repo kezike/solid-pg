@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Solid Playground</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"/>
-        <title>Solid Fetch</title>
-        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'/>
-        <!--<script data-main="js/simple-fetch.js" src="js/require.js"></script>
-        <script src="https://solid.github.io/releases/rdflib.js/rdflib-0.12.2.min.js"></script>
-        <script src="https://solid.github.io/releases/solid.js/solid-client-lite-0.22.5.min.js"></script>
-        <script src="js/solid-auth-client.bundle.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-                crossorigin="anonymous"></script>-->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" type="./img/png" href="./img/favicon.png"/>
     </head>
-
-    <body>
-        <div class="content center-text" id="view">
-            <h1 id="view-title">Solid Fetch</h1>
-            <br>
-            <div id="view-body"></div>
-        </div>
-
-        <button id="login" class="btn">Login</button>
-
-        <div id="profile" class="hidden">
-            <h3 id="name"></h3>
-            <div>
-                <img id="image" height="100" width="100">
-            </div>
-            <div id="messages"></div>
-        </div>
-
-        <script src=./dist/app.bundle.js charset="utf-8"></script>
-        <script src="./app.js"></script>
-    </body>
+  <body class="container">
+      <div>
+          <h1>Solid Playground</h1>
+      </div>
+      <div>
+          <h3>Fetch Document</h3>
+          <form>
+              <fieldset>
+                <div id="profile" class="hidden">
+                    <h3 id="name"></h3>
+                    <div>
+                        <img id="image" height="100" width="100">
+                    </div>
+                </div>
+                <div>
+                    <label for="fetch-doc-uri">Provide Fetch URI:</label>
+                    <input type="text" placeholder="eg.: https://USER.solid.community/public/example.txt" size=50 id="fetch-doc-uri">
+                    <input type="submit" value="Fetch Document" id="fetch-doc">
+                </div>
+                <div id=fetched-doc class="hidden" style="border:1px solid black; white-space: pre-wrap;">
+                    <!--<p id=fetched-doc></p>-->
+                </div>
+              </fieldset>
+          </form>
+      </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!--<script src="./app/rdflib-ruben.min.js" charset="utf-8"></script>-->
+  <script src="./app/dist/app.bundle.js" charset="utf-8"></script>
 </html>

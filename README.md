@@ -1,1 +1,1 @@
-Solid Test - Solid Single-Page Test Application
+Solid Playground - Solid Single-Page Playground Application
