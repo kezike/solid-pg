@@ -22,12 +22,11 @@ SolidPG = {
     postOptions: {
       method: 'POST',
       headers: {
-        'content-type': 'text/n3'
+        'content-type': 'text/n3' // REPLACE ME BEFORE USAGE
       },
       mode: 'cors',
       credentials: 'include',
-      /*body: "@prefix : <#>.\n@prefix c: <https://kezike17/solidtest.space/profile/card#>.\n@prefix n0: <http://xmlns.com/foaf/0.1/>.\n@prefix     c0: <https://www.w3.org/People/Berners-Lee/card#>.\nc:me n0:knows c0:i.",*/
-      body: "REPLACE ME BEFORE USAGE"
+      body: "" // REPLACE ME BEFORE USAGE
     },
     //// END REST CONFIGURATION ////
 
@@ -56,7 +55,6 @@ SolidPG = {
         var loadPromise = new Promise((resolve, reject) => {
             SolidPG.fetcher.load(target, SolidPG.getOptions).then((resp) => {
                 resolve(resp['responseText']);
-                // resolve(JSON.stringify(resp));
             }).catch((err) => {
                reject(err);
             });
