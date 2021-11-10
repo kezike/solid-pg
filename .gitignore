@@ -1,6 +1,7 @@
-app/dist
+src/dist
 config.json
 *cookies.txt
 node_modules
 *package-lock.json
+public/popup.html
 *.DS_Store

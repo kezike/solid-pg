@@ -2,17 +2,16 @@
 const path = require('path');
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: 'app.bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: './dist/app.bundle.js'
   },
   module: {
-    // loaders: [
     rules: [
       {
         test: /\.css$/,
-        loader: 'style!css!'
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /^node_modules\/jsonld/,
@@ -30,7 +29,7 @@ module.exports = {
         test: /\.js?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        query: {
+        options: {
           presets: ['@babel/preset-env'],
           plugins: [
             ['@babel/plugin-proposal-object-rest-spread'],

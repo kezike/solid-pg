@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Setup solid-pg environment
+# Setup solid-pg cli environment
 
 # BEGIN SETUP
 
@@ -45,6 +45,9 @@ printf "Please enter your Solid account username [ENTER]:\n---> "
 read uname
 printf "Please enter your Solid account password [ENTER]:\n---> "
 read pass
+
+echo json api: $jsonApi
+echo config file: $configFile
 node $jsonApi --write --key=$webidKey --value=$webid --json=$configFile
 node $jsonApi --write --key=$accountKey --value=$account --json=$configFile
 node $jsonApi --write --key=$unameKey --value=$uname --json=$configFile

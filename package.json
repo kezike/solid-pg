@@ -2,15 +2,28 @@
   "name": "solid-pg",
   "version": "1.0.0",
   "description": "Solid Playground - Solid Single-Page Playground Application",
-  "main": "app/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "setup": "chmod +x setup.sh; ./setup.sh",
+    "setup-cli": "chmod +x setup-cli.sh && ./setup-cli.sh",
+    "setup-web": "chmod +x setup-web.sh && ./setup-web.sh",
     "build": "webpack --config ./app/webpack.config.js --mode production",
     "dev": "webpack --config ./app/webpack.config.js --mode development",
-    "start": "webpack-dev-server --config ./app/webpack.config.js --mode production"
+    "start": "setup-web && webpack-dev-server --config ./app/webpack.config.js --mode development --hot"
   },
-  "author": "Kayode Ezike <kezike17@mit.edu>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kezike/solid-pg.git"
+  },
+  "author": "Kayode Ezike <kezike@alum.mit.edu>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kezike/solid-pg/issues"
+  },
+  "homepage": "https://github.com/kezike/solid-pg#README",
+  "dependencies": {
+    "rdflib": "^2.2.10",
+    "solid-auth-client": "^2.5.6"
+  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -21,6 +34,7 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.16.3",
     "babel-loader": "^8.0.5",
     "css-loader": "^0.28.11",
     "escape-html": "^1.0.3",
@@ -32,24 +46,9 @@
     "solid-client": "^0.24.3",
     "standard": "^10.0.3",
     "style-loader": "^0.19.1",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0",
-    "webpack-dev-server": "^3.1.14",
-    "webpack-merge": "^4.2.1"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.2.0",
-    "@trust/oidc-web": "^0.2.1",
-    "file-saver": "^2.0.0",
-    "get-ssl-certificate": "^2.1.2",
-    "glob": "^7.1.2",
-    "jsonld": "^1.4.0",
-    "jsonld-signatures": "^3.1.0",
-    "minimist": "^1.2.0",
-    "n3": "^1.0.0-beta.1",
-    "node-forge": "^0.7.5",
-    "rdf-canonize": "^0.2.4",
-    "rdflib": "^0.19.1",
-    "solid-auth-client": "^2.2.14"
+    "webpack": "^5.63.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0",
+    "webpack-merge": "^5.8.0"
   }
 }

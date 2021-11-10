@@ -5,9 +5,9 @@ const args = require('minimist')(process.argv.slice(2));
 const fs = require('fs');
 
 // JSON data
-var jsonFile = "";
-var jsonStr = "";
-var jsonObj = {};
+let jsonFile = "";
+let jsonStr = "";
+let jsonObj = {};
 
 // Discover json file
 if (args.json) {
@@ -18,8 +18,8 @@ if (args.json) {
 if (args.read) {
   jsonStr = fs.readFileSync(jsonFile, 'utf8');
   jsonObj = JSON.parse(jsonStr);
-  var key = args.key;
-  var value = jsonObj[key];
+  const key = args.key;
+  const value = jsonObj[key];
   console.log(value);
 }
 
@@ -27,8 +27,8 @@ if (args.read) {
 if (args.write) {
   jsonStr = fs.readFileSync(jsonFile, 'utf8');
   jsonObj = JSON.parse(jsonStr);
-  var key = args.key;
-  var value = args.value;
+  const key = args.key;
+  const value = args.value;
   jsonObj[key] = value;
   fs.writeFileSync(jsonFile, JSON.stringify(jsonObj, null, 4) , 'utf-8');
 }
@@ -37,7 +37,7 @@ if (args.write) {
 if (args.delete) {
   jsonStr = fs.readFileSync(jsonFile, 'utf8');
   jsonObj = JSON.parse(jsonStr);
-  var key = args.key;
+  const key = args.key;
   delete jsonObj[key]
   fs.writeFileSync(jsonFile, JSON.stringify(jsonObj, null, 4) , 'utf-8');
 }
