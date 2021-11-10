@@ -6,9 +6,9 @@
   "scripts": {
     "setup-cli": "chmod +x setup-cli.sh && ./setup-cli.sh",
     "setup-web": "chmod +x setup-web.sh && ./setup-web.sh",
-    "build": "webpack --config ./app/webpack.config.js --mode production",
-    "dev": "webpack --config ./app/webpack.config.js --mode development",
-    "start": "npm run setup-web && webpack-dev-server --config ./app/webpack.config.js --mode development --hot"
+    "build": "webpack --config ./src/webpack.config.js --mode production",
+    "dev": "webpack --config ./src/webpack.config.js --mode development",
+    "start": "npm run setup-web && webpack-dev-server --config ./src/webpack.config.js --mode development --hot"
   },
   "repository": {
     "type": "git",
