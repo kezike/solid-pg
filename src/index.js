@@ -5,7 +5,7 @@ const $auth = require('solid-auth-client');
 const $rdf = require('rdflib');
 
 // Global variables
-const popupUri = 'public/popup.html';
+const popupUri = 'popup.html';
 
 const SolidPG = SolidPG || {};
 
