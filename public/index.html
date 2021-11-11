@@ -13,17 +13,21 @@
       <h1>Solid Playground</h1>
     </div>
     <div>
+      <button class="hidden" id="login">Login</button>
+      <button class="hidden" id="logout">Logout</button>
+    </div>
+    <div id="profile" class="hidden">
+      <h4 id="name"></h4>
+      <div>
+          <img id="image" height="100" width="100">
+      </div>
+    </div>
+    <div>
       <h3>Fetch Document</h3>
       <form>
         <fieldset>
-          <div id="profile" class="hidden">
-            <h3 id="name"></h3>
-            <div>
-                <img id="image" height="100" width="100">
-            </div>
-          </div>
           <div>
-            <label for="fetch-doc-uri">Provide Fetch URI:</label>
+            <label for="fetch-doc-uri">Resource URL:</label>
             <input type="text" placeholder="eg.: https://USER.solidcommunity.net/public/example.txt" size=50 id="fetch-doc-uri">
             <input type="submit" value="Fetch Document" id="fetch-doc">
           </div>
@@ -32,6 +36,11 @@
       </form>
     </div>
   </body>
+  <style>
+    #profile, #login, #logout {
+      float: right;
+    }
+  </style>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="dist/app.bundle.js"></script>
